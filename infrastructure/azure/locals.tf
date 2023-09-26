@@ -368,7 +368,7 @@ locals {
       resource_group_name = "rg-app-${local.resource_suffix}"
       location            = local.primary_region
       subnet_id           = azurerm_subnet.subnet["appnet"].id
-      nic_ids             = azurerm_network_interface.nic["app"].id
+      nic_ids             = [azurerm_network_interface.nic["app"].id]
     }
   }
 }
